@@ -1,1 +1,30 @@
-<p>employee-list works!</p>
+<h2>Employee List</h2>
+
+<table class="min-w-full bg-white">
+    <thead>
+        <tr>
+            <th class="py-2 px-4 border-b">ID</th>
+            <th class="py-2 px-4 border-b">Name</th>
+            <th class="py-2 px-4 border-b">Position</th>
+            <th class="py-2 px-4 border-b">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (employee of employees; track employee.id) {
+        <tr>
+            <td class="py-2 px-4 border-b">{{ employee.id }}</td>
+            <td class="py-2 px-4 border-b">{{ employee.name }}</td>
+            <td class="py-2 px-4 border-b">{{ employee.position }}</td>
+            <td class="py-2 px-4 border-b">
+                <button class="bg-blue-500 text-white px-4 py-2 rounded" (click)="editEmployee(employee)">
+                    Edit    
+                </button>
+
+                <button class="bg-red-500 text-white px-4 py-2 rounded " (click)="deleteEmployee(employee.id)">
+                    Delete
+                </button>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
