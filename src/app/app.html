@@ -1,15 +1,12 @@
-<main>
+<mat-sidenav-container class="h-screen w-full">
+  <mat-sidenav mode="side" opened class="w-72 border-none!">
+    <app-sidebar></app-sidebar>
+  </mat-sidenav>
 
-  <div class="grid grid-cols-12 h-screen">
-
-    <div class="col-span-3">
-      <app-sidebar></app-sidebar>
-    </div>
-
-    <div class="col-span-9 p-5">
+  <mat-sidenav-content class="bg-slate-50 flex flex-col">
+    <app-navbar></app-navbar>
+    <main class="p-8 flex-1 overflow-auto">
       <router-outlet></router-outlet>
-    </div>
-
-  </div>
-
-</main>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>
