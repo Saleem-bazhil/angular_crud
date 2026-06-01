@@ -1,0 +1,12 @@
+.active-link {
+  background-color: #334155;
+  border-radius: 8px;
+}
+
+mat-sidenav {
+  padding: 10px;
+}
+
+mat-icon {
+  margin-right: 10px;
+}
